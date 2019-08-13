@@ -28,9 +28,9 @@ const HomePage = () => (
       <>
       {edges.map((edge) => (
         <>
-        <h1>{edge.title}</h1>
-        <small>Created on {edge.date}</small>
-        <p>{edge.body.body}</p>
+        <h1>{edge.node.title}</h1>
+        <small>Created on {edge.node.date}</small>
+        <p>{edge.node.body.body}</p>
         </>
       ))}
       </>
