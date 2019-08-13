@@ -4,36 +4,35 @@ import { StaticQuery, graphql } from "gatsby";
 const HomePage = () => (
   <StaticQuery
     query={graphql`
-      query HomePage {
-        contentfulHomePage {
-          title
-          date
-          content {
-            content
-          }
-          image {
-            file {
-              url
+      {
+        allContentfulBlogPost {
+          edges {
+            node {
+              id
+              slug
+              updatedAt
+              body {
+                body
+              }
+              title
             }
           }
         }
       }
-    `}
+`}
     render={({
-      contentfulHomePage: {
-        title,
-        date,
-        content: { content },
-        image: {
-          file: { url }
-        }
+      allContentfulBlogPost: {
+        edges,
       }
     }) => (
       <>
-        <h1>{title}</h1>
-        <small>Created on {date}</small>
-        <img src={url} />
-        <p>{content}</p>
+      {edges.map((edge) => (
+        <>
+        <h1>{edge.title}</h1>
+        <small>Created on {edge.date}</small>
+        <p>{edge.body.body}</p>
+        </>
+      ))}
       </>
     )}
   />
