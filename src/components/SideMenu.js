@@ -1,18 +1,13 @@
-import React, { useRef } from 'react'
-import '../styles.css';
+import React, { useRef } from 'react';
 import SideMenuContent from './SideMenuContent';
 import PageContent from './PageContent';
-import { FaHome, FaRss, FaMagic, FaStreetView } from 'react-icons/fa';
-
 
 const SideMenu = ({ menuItems, pageContent }) => {
   const sideMenuContentRef = useRef(null);
   const pageContentRef = useRef(null);
 
   const toggleMenu = () => {
-    //var menu = document.getElementsByclassNameName('side-menu')[0];
     var menu = sideMenuContentRef.current;
-    //var content = document.getElementsByclassNameName('page-content')[0];
     var content = pageContentRef.current;
     if(!menu) {
       return null;
@@ -36,25 +31,7 @@ const SideMenu = ({ menuItems, pageContent }) => {
       <SideMenuContent
         sideMenuContentRef={sideMenuContentRef}
         toggleMenu={toggleMenu}
-        menuItems={[
-          {
-             title:'Home',
-             icon: <FaHome />,
-             link: '/'
-          }, {
-              title:'Projects',
-              icon: <FaMagic />,
-              link: 'blogPage'
-          }, {
-              title:'Contact',
-              icon: <FaRss />,
-              link: 'blogPage'
-          }, {
-              title:'About',
-              icon: <FaStreetView />,
-              link: 'blogPage'
-          }
-        ]}
+        menuItems={menuItems}
         >
       </SideMenuContent>
       <PageContent
@@ -62,7 +39,6 @@ const SideMenu = ({ menuItems, pageContent }) => {
         {pageContent}
       </PageContent>
     </div>
-
   )
 }
 

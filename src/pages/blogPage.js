@@ -1,12 +1,12 @@
 import React from 'react'
 import '../styles.css';
-import SideMenu from '../components/SideMenu';
+import Layout from '../components/Layout';
 import Blog from '../components/Blog';
 
 const BlogPage = ( ) => {
   return (
-    <SideMenu pageContent={<Blog />}>
-    </SideMenu>
+    <Layout pageContent={<Blog />}>
+    </Layout>
   )
 }
 

@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import SideMenu from './SideMenu'
+import SideMenu from './SideMenu';
+import "./normalize.css";
+import "./reset.css";
 import "./styles.css";
-import "./main.js";
 
 function App() {
   return (

@@ -20,18 +20,14 @@ const Blog = () => (
         }
       }
 `}
-    render={({
-      allContentfulBlogPost: {
-        edges,
-      }
-    }) => (
+    render={data => (
       <>
-      {edges.map((edge) => (
-        <>
+      {data.allContentfulBlogPost.edges.map((edge, idx) => (
+        <div key={idx}>
         <h1>{edge.node.title}</h1>
         <small>Created on {edge.node.date}</small>
         <p>{edge.node.body.body}</p>
-        </>
+        </div>
       ))}
       </>
     )}

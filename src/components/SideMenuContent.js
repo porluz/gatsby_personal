@@ -13,8 +13,8 @@ const SideMenuContent = ({toggleMenu, sideMenuContentRef, menuItems}) => {
         </div>
         <div className="menu-body">
           <ul className="menu-list">
-          {menuItems.map((item) => (
-            <li className="">
+          {menuItems.map((item, idx) => (
+            <li key={idx} className="">
               <Link to={"/" + item.link}>
                 <span>
                   <span
