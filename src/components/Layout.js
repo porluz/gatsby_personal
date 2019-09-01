@@ -3,24 +3,23 @@ import "../normalize.css";
 import "../reset.css";
 import "../styles.css";
 import SideMenu from './SideMenu';
-import { FaHome, FaRss, FaMagic, FaStreetView } from 'react-icons/fa';
 
 const menuItems=[
   {
      title: 'Home',
-     icon: <FaHome />,
+     iconName: 'FaHome',
      link: ''
   }, {
       title: 'Projects',
-      icon: <FaMagic />,
+      iconName: 'FaMagic',
       link: 'blogPage'
   }, {
       title: 'Contact',
-      icon: <FaRss />,
+      iconName: 'FaRss',
       link: 'blogPage'
   }, {
       title: 'About',
-      icon: <FaStreetView />,
+      iconName: 'FaStreetView',
       link: 'blogPage'
   }
 ];

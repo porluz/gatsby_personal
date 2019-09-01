@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "gatsby"
-import { FaBars } from 'react-icons/fa';
+import Icon from './Icon';
 
 const SideMenuContent = ({toggleMenu, sideMenuContentRef, menuItems}) => {
   return (
@@ -8,7 +8,7 @@ const SideMenuContent = ({toggleMenu, sideMenuContentRef, menuItems}) => {
         <div className="menu-container">
           <div className="menu-header">
           <button className="toggle-button" onClick={toggleMenu}>
-          <FaBars />
+          <Icon iconName="FaBars"/>
           </button>
         </div>
         <div className="menu-body">
@@ -19,7 +19,7 @@ const SideMenuContent = ({toggleMenu, sideMenuContentRef, menuItems}) => {
                 <span>
                   <span
                   className={"menu-icon"}>
-                  {item.icon}
+                  <Icon iconName={item.iconName} />
                   </span>
                   <span className="menu-icon-text">{item.title}</span>
                 </span>
