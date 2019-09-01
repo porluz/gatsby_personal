@@ -14,6 +14,7 @@ module.exports = {
         spaceId,
         accessToken
       }
-    }
+    },
+    `gatsby-plugin-styled-components`
   ]
 };
